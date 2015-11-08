@@ -2,8 +2,9 @@ var ctx;
 var rocket;
 var x;
 var y;
+var c;
 $(document).ready(function(){
-  var c = document.getElementById("myCanvas");
+  c = document.getElementById("myCanvas");
   c.height = window.innerHeight;
   c.width = window.innerWidth;
 
@@ -18,6 +19,8 @@ $(document).ready(function(){
 
 })
 function render(timestamp){
+  ctx.clearRect(0, 0, c.width, c.height);
   ctx.drawImage(rocket, x, y);
+  y--;
   window.requestAnimationFrame(render);
 }
