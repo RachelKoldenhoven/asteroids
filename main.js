@@ -3,6 +3,10 @@ $(document).ready(function(){
   c.height = window.innerHeight;
   c.width = window.innerWidth;
 var ctx = c.getContext("2d");
-ctx.fillStyle = "#FF0000";
-ctx.fillRect(0,0,150,75);
+var rocket = new Image();
+rocket.onload = function(){
+  ctx.drawImage(rocket, 50, 50);
+}
+rocket.src = "rocket.png";
+
 })
